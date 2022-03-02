@@ -11,6 +11,12 @@ app.get('/', (req, res) => {
   })
 })
 
+app.get('/hola', (req, res) => {
+  res.json({
+    message: 'hola endpoint'
+  })
+})
+
 app.listen(port, () => {
   console.log('Server running in port: ', port)
 })
