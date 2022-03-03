@@ -17,6 +17,12 @@ app.get('/hola', (req, res) => {
   })
 })
 
+app.get('/env', (req, res) => {
+  res.json({
+    env: process.env
+  })
+})
+
 app.listen(port, () => {
   console.log('Server running in port: ', port)
 })
