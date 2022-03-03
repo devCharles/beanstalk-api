@@ -24,7 +24,7 @@ app.get('/env', (req, res) => {
   })
 })
 
-app.get('/quince', () => {
+app.get('/quince', (req, res) => {
   res.json({
     message: 'Hola 15JS'
   })
