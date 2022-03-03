@@ -1,6 +1,7 @@
 
 require('dotenv').config()
 const express = require('express')
+const res = require('express/lib/response')
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -20,6 +21,12 @@ app.get('/hola', (req, res) => {
 app.get('/env', (req, res) => {
   res.json({
     env: process.env
+  })
+})
+
+app.get('/quince', () => {
+  res.json({
+    message: 'Hola 15JS'
   })
 })
 
